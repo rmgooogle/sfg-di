@@ -8,12 +8,11 @@ import org.springframework.stereotype.Controller;
 public class ConstructorInjContr {
     private final GreetingService greetingService;
 
-
-    public ConstructorInjContr(@Qualifier("constrGreetContr") GreetingService greetingService) {
+    public ConstructorInjContr(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
     public String getGreeting () {
-        return greetingService.sayGreeting();
+                return greetingService.sayGreeting();
     }
 }
