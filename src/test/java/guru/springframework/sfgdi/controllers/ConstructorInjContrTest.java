@@ -1,17 +1,15 @@
 package guru.springframework.sfgdi.controllers;
 
-import guru.springframework.sfgdi.services.GreetongServiseImpl;
+import guru.springframework.sfgdi.services.ConstrGreetContr;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorInjContrTest {
     ConstructorInjContr controller;
 
     @BeforeEach
     void setUp() {
-        controller = new ConstructorInjContr(new GreetongServiseImpl());
+        controller = new ConstructorInjContr(new ConstrGreetContr());
     }
 
     @Test

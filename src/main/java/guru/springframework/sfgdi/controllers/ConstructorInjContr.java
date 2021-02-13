@@ -1,15 +1,19 @@
 package guru.springframework.sfgdi.controllers;
 
-import guru.springframework.sfgdi.services.GreetongServise;
+import guru.springframework.sfgdi.services.GreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjContr {
-    private final GreetongServise greetongServise;
+    private final GreetingService greetingService;
 
-    public ConstructorInjContr(GreetongServise greetongServise) {
-        this.greetongServise = greetongServise;
+
+    public ConstructorInjContr(@Qualifier("constrGreetContr") GreetingService greetingService) {
+        this.greetingService = greetingService;
     }
 
     public String getGreeting () {
-        return greetongServise.sayGreeting();
+        return greetingService.sayGreeting();
     }
 }
