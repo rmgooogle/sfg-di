@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 public class ConstrGreetContr implements GreetingService {
     @Override
     public String sayGreeting() {
-
         return "Hello World - Constructor";
     }
 }
